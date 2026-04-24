@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessibility · Clausemate</title>
+  <meta name="description" content="Clausemate on iPhone supports VoiceOver, Voice Control, Dynamic Type, Reduced Motion, Differentiate Without Color Alone, and Sufficient Contrast.">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="wrap">
+      <a href="/" class="brand">
+        <img src="assets/icon.png" alt="" class="seal-sm">
+        <span class="brand-name">Clausemate</span>
+      </a>
+      <nav class="topnav">
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Support</a>
+        <a href="accessibility.html" aria-current="page">Accessibility</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="doc wrap">
+    <span class="kicker">ACCESSIBILITY</span>
+    <h1 class="display">Readable<br><em>by design.</em></h1>
+    <p class="doc-meta">Last updated April 25, 2026 · Version 1.0</p>
+
+    <div class="rule"></div>
+
+    <section class="doc-section">
+      <h2>Summary</h2>
+      <p>Clausemate is designed so that every core task — scanning a contract, reading the summary, asking a question, comparing two documents, and managing data on the Profile tab — can be completed by users who rely on iOS's built-in accessibility technologies. The list below describes what the app supports today on iPhone. Each entry reflects what we've actually built and tested, not aspirations.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2>VoiceOver</h2>
+      <p>Every tappable control in Clausemate has an accessibility label. Icon-only buttons — the Ask-tab Send arrow, the Share-as-PDF button on the document detail view, the floating scan button on the Documents tab, the close X on the paywall, the language picker, the "Support Clausemate" tip button — all expose a clear spoken label and, where relevant, an accessibility hint describing what the control does.</p>
+      <p>Decorative ornaments (the breathing wax-seal mascot, the gold double-rule separators, the parchment textures) are hidden from the accessibility tree so they do not clutter the reading order. Bubble transcripts in the Ask chat are grouped so each turn reads as a single coherent element.</p>
+      <p>To try it: Settings → Accessibility → VoiceOver → On. Open Clausemate and swipe right to tour the controls.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2>Voice Control</h2>
+      <p>Because every control exposes a proper accessibility label, iOS's Voice Control surfaces numbered overlays on all of them. Say "Show numbers" after enabling Voice Control and you will see a number on every button on the current screen. "Tap 3" activates the third control; "Swipe up" and "Swipe down" scroll; "Go back" exits modal sheets. No button in Clausemate is reachable only by gesture.</p>
+      <p>To try it: Settings → Accessibility → Voice Control → Turn on. Then speak commands at a normal volume.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2>Larger Text (Dynamic Type)</h2>
+      <p>Body copy and most headings scale with the iOS system text size, including the accessibility sizes (200%+). This is handled by a single readable-modifier applied across the app that takes your chosen size and adapts each view's typography. A few display-only elements — the 34-point Garamond hero headlines — stay a fixed size to preserve the editorial layout, but every informational string scales with your preference.</p>
+      <p>To try it: Settings → Accessibility → Display & Text Size → Larger Text → drag the slider. Return to Clausemate and the body text grows.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2>Reduced Motion</h2>
+      <p>When Reduce Motion is on, Clausemate suppresses its two non-essential animations: the slow "breathing" rotation on the wax-seal mascot and the gold-dust particle layer on the paywall. Page transitions remain crisp but skip any parallax. You do not lose any information — every visual cue conveyed via motion is duplicated in text or color.</p>
+      <p>To try it: Settings → Accessibility → Motion → Reduce Motion → On.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2>Differentiate Without Color Alone</h2>
+      <p>Red flags on clauses are never signaled by color alone. A flagged clause carries a filled burgundy circle, a warning-triangle SF Symbol, and a text badge that reads "Red flag". On the Home tab's sample hero card, the count of clauses to review appears as an inline text pill ("2 clauses to flag"), not just a colored dot. The live privacy pill ("ON-DEVICE") pairs an olive capsule with a lock icon and a bold monospace label.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2>Sufficient Contrast</h2>
+      <p>Clausemate's primary text is ink on parchment, which measures approximately 11:1 contrast — above WCAG AAA 7:1. Burgundy on parchment measures approximately 7.5:1, also above AAA. Secondary text uses a lightly-reduced ink that remains above the 4.5:1 AA threshold. We use italic Garamond sparingly and never for informational content that must be parsed quickly.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2>Not supported in v1.0</h2>
+      <p><strong>Dark interface.</strong> Clausemate v1.0 runs in light mode only — the parchment aesthetic is the whole product's visual identity. A true dark theme is tracked as a future consideration, not a near-term plan.</p>
+      <p><strong>Captions and audio descriptions.</strong> Clausemate has no video or audio content, so these accessibility technologies do not apply.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2>Tell us what we missed</h2>
+      <p>Accessibility work is never finished. If you hit a control that lacks a label, a screen that reads poorly with VoiceOver, a view that breaks at the largest text size, or a feature where Voice Control can't reach a button — please email <a href="mailto:89leon@gmail.com?subject=Clausemate%20accessibility">89leon@gmail.com</a>. Include the iPhone model, iOS version, and which accessibility feature you use. We read every report.</p>
+    </section>
+
+    <div class="rule short"></div>
+    <p class="doc-foot">This page mirrors the accessibility declarations published in Clausemate's App Store listing.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot-wrap">
+      <div class="foot-mark">
+        <img src="assets/icon.png" alt="" class="seal-sm">
+        <span>Clausemate</span>
+      </div>
+      <nav class="foot-links">
+        <a href="/">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Support</a>
+        <a href="mailto:89leon@gmail.com">Contact</a>
+      </nav>
+      <p class="copyright">© 2026 Leon Orlinski. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
