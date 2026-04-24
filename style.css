@@ -1,0 +1,418 @@
+/* ==== Clausemate web · editorial "Deed" aesthetic ================== */
+
+:root {
+  --parchment: #EFE6D3;
+  --cream:     #F7F0DF;
+  --paperline: #E2D4B4;
+  --ink:       #2B1F15;
+  --ink-2:     rgba(43, 31, 21, 0.72);
+  --ink-3:     rgba(43, 31, 21, 0.50);
+  --burgundy:  #6B1F2A;
+  --burgundy-soft: rgba(107, 31, 42, 0.08);
+  --gold:      #B38A3E;
+  --gold-soft: rgba(179, 138, 62, 0.25);
+
+  --rule-gold: rgba(179, 138, 62, 0.55);
+  --display: "EB Garamond", "Iowan Old Style", "Hoefler Text", serif;
+  --body:    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--parchment);
+  color: var(--ink);
+  font-family: var(--body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.55;
+  font-size: 16px;
+}
+
+a {
+  color: var(--burgundy);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold-soft);
+  transition: border-color .18s ease, color .18s ease;
+}
+a:hover { border-color: var(--burgundy); }
+
+.wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* ---- Topbar --------------------------------------------------------- */
+
+.topbar {
+  padding: 24px 0 0;
+}
+.topbar .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--ink);
+  border-bottom: none;
+  letter-spacing: 0.01em;
+}
+.brand-name { line-height: 1; }
+.seal-sm {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: 0 0 28px;
+}
+.topnav {
+  display: inline-flex;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.topnav a {
+  color: var(--ink);
+  border-bottom: none;
+  padding-bottom: 2px;
+}
+.topnav a[aria-current="page"] {
+  border-bottom: 1px solid var(--gold);
+}
+
+/* ---- Hero ----------------------------------------------------------- */
+
+.hero {
+  padding: 72px 28px 56px;
+}
+.kicker {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--burgundy);
+  padding: 6px 10px;
+  border: 1px solid var(--burgundy);
+  border-radius: 999px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+.display {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(54px, 9vw, 96px);
+  line-height: 0.96;
+  margin: 0 0 24px;
+  letter-spacing: -0.015em;
+}
+.display em {
+  font-style: italic;
+  color: var(--burgundy);
+}
+.display-sm {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(32px, 5vw, 44px);
+  line-height: 1.05;
+  margin: 0 0 28px;
+}
+.display-sm em {
+  font-style: italic;
+  color: var(--burgundy);
+}
+
+.lede {
+  font-family: var(--display);
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.45;
+  color: var(--ink-2);
+  max-width: 620px;
+  margin: 0 0 32px;
+}
+
+.rule {
+  height: 4px;
+  position: relative;
+  margin: 40px 0;
+  border: none;
+}
+.rule::before,
+.rule::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--rule-gold);
+}
+.rule::before { top: 0; }
+.rule::after  { bottom: 0; }
+.rule.short {
+  max-width: 120px;
+  margin: 40px 0;
+}
+
+.cta-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.appstore {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  background: var(--ink);
+  color: var(--parchment);
+  padding: 14px 22px;
+  border-radius: 999px;
+  border-bottom: none;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: transform .2s ease, box-shadow .2s ease;
+  box-shadow: 0 10px 24px rgba(43, 31, 21, 0.18);
+}
+.appstore:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(43, 31, 21, 0.24);
+}
+.appstore-caption {
+  font-size: 10.5px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.appstore-name {
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.cta-note {
+  font-size: 13px;
+  color: var(--ink-3);
+  letter-spacing: 0.02em;
+}
+
+/* ---- Promises (3 cards) -------------------------------------------- */
+
+.promises {
+  padding: 24px 28px 56px;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 720px) {
+  .promises { grid-template-columns: repeat(3, 1fr); }
+}
+.promise {
+  background: var(--cream);
+  border: 1px solid var(--paperline);
+  border-radius: 18px;
+  padding: 22px 22px 24px;
+  position: relative;
+}
+.promise-num {
+  display: inline-block;
+  font-family: var(--display);
+  font-style: italic;
+  color: var(--gold);
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.promise h3 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.15;
+  margin: 0 0 8px;
+  letter-spacing: -0.005em;
+}
+.promise p {
+  color: var(--ink-2);
+  font-size: 14.5px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ---- "What you get back" list -------------------------------------- */
+
+.what {
+  padding: 32px 28px 64px;
+}
+.what-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+  font-family: var(--display);
+  font-size: 19px;
+}
+@media (min-width: 720px) {
+  .what-list { grid-template-columns: 1fr 1fr; }
+}
+.what-list li {
+  padding: 14px 18px;
+  border: 1px solid var(--paperline);
+  border-radius: 12px;
+  background: var(--cream);
+  color: var(--ink);
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+}
+.what-tag {
+  flex: 0 0 auto;
+  font-family: var(--body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--burgundy);
+  background: var(--burgundy-soft);
+  padding: 4px 8px;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+/* ---- Disclaimer ----------------------------------------------------- */
+
+.disclaimer {
+  padding: 28px 28px 80px;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 15.5px;
+  color: var(--ink-2);
+}
+.disclaimer strong {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--burgundy);
+}
+
+/* ---- Document pages (privacy, support) ----------------------------- */
+
+.doc {
+  padding: 56px 28px 96px;
+}
+.doc .kicker { margin-bottom: 18px; }
+.doc .display { margin-bottom: 10px; }
+.doc-meta {
+  color: var(--ink-3);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  margin: 0 0 18px;
+}
+.doc-section {
+  margin: 36px 0;
+}
+.doc-section h2 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.1;
+  margin: 0 0 10px;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+.doc-section h3 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 1.2;
+  margin: 18px 0 6px;
+  color: var(--burgundy);
+}
+.doc-section p {
+  color: var(--ink-2);
+  font-size: 16px;
+  line-height: 1.65;
+  margin: 0 0 12px;
+  max-width: 640px;
+}
+.doc-foot {
+  color: var(--ink-3);
+  font-size: 13px;
+  font-style: italic;
+  font-family: var(--display);
+  margin-top: 24px;
+}
+
+.big-link {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 22px;
+  color: var(--burgundy);
+  border-bottom: 1px solid var(--gold);
+}
+
+/* ---- Footer --------------------------------------------------------- */
+
+.site-footer {
+  background: var(--cream);
+  border-top: 1px solid var(--paperline);
+  padding: 40px 0;
+  margin-top: 64px;
+}
+.foot-wrap {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+@media (min-width: 640px) {
+  .foot-wrap {
+    grid-template-columns: auto 1fr auto;
+    gap: 24px;
+  }
+}
+.foot-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 20px;
+  color: var(--ink);
+}
+.foot-links {
+  display: inline-flex;
+  gap: 22px;
+  font-size: 14px;
+}
+.foot-links a {
+  color: var(--ink-2);
+  border-bottom: none;
+}
+.foot-links a:hover { color: var(--burgundy); }
+.copyright {
+  margin: 0;
+  color: var(--ink-3);
+  font-size: 12.5px;
+  letter-spacing: 0.02em;
+  text-align: right;
+}
+@media (max-width: 640px) {
+  .copyright { text-align: left; }
+}
+
+/* ---- Focus states --------------------------------------------------- */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--burgundy);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
